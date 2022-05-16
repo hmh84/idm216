@@ -1,0 +1,353 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--forward-gradient: linear-gradient(90deg, rgb(182,215,244) 0%, rgb(255,128,223) 100%);
+	--backward-gradient: linear-gradient(90deg, rgb(255,128,223) 0%, rgb(182,215,244) 100%);
+	/*
+	Use like so:
+	background: var(--forward-gradient);
+	background: var(--backward-gradient);
+	*/
+}
+
+.shadow {
+	box-shadow: 1px 10px 20px 7px rgba(0, 0, 0, 0.15);
+}
+
+nav {
+	background-color: white;
+	width: 100%;
+	padding: 2rem 0;
+	position: fixed;
+	display: flex;
+	top: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.back-btn {
+    position: absolute;
+    left: 2rem;
+}
+
+.back-btn:active, .back-btn:hover {
+	fill: #FF00BF;
+}
+
+.nav-header {
+	display: flex;
+	margin: 0 auto;
+	padding-bottom: 0.25em;
+}
+
+.nav-header img {
+	padding-right: 0.5em;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	margin: 2rem 0;
+}
+
+.text-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 2rem;
+}
+
+.dropdown {
+	height: 45px;
+    position: absolute;
+    top: 125px;
+    width: 200px;
+    border: 3px solid #C8CCF8;
+    background-color: white;
+    border-radius: 50px;
+    margin: 0 1rem;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown img {
+	transition: all .5s ease-in-out;
+	width: 1.25rem;
+}
+
+.active {
+	transform: rotate(-180deg);
+}
+
+.container.dropdown-wrap {
+	flex-direction: column;
+	align-items: center;
+	margin: 4rem;
+}
+
+.button {
+	padding: 1rem;
+	border: 3px solid #FF00BF;
+	border-radius: 50px;
+	background-color: white;
+	text-decoration: none;
+	font-family: 'Cabin', sans-serif;
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+}
+
+.export {
+	display: none !important; /* HIDDEN UNTIL WE FIGURE OUT ITS USE! */
+	margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border-radius: 7px;
+	border: 1.5px solid #FF00BF;
+	width: 48px;
+	height: 27px;
+	font-family: Cabin;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 12px;
+	color: black;
+}
+
+.export:active, .export:hover {
+	color: #FF00BF
+}
+
+.button:hover {
+	border: 3px solid #FF00BF;
+	background-color: #FFE5FD;
+	color: #FF00BF;
+	transition: all .2s ease-in-out;
+}
+
+.back-btn-svg:hover {
+	filter: invert(.5) sepia(1) saturate(5) hue-rotate(-75deg);
+	transition: 0.3s;
+}
+
+h1 {
+	font-family: 'Cabin', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: 'Cabin', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+p {
+	font-family: 'Cabin', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Ride History Cards */
+
+.ride-history {
+	flex-direction: column;
+	margin: 2rem;
+}
+
+.ride-history-card {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    border-radius: .5rem;
+	padding: .33rem;
+	border: rgb(182,215,244) .2rem solid;
+}
+
+.ride-history-card .card-img-area {
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	padding: .5rem;
+}
+
+.ride-history-card .card-icon {
+	border: black .1rem solid;
+	border-radius: 50%;
+}
+
+.driver-name {
+	font-weight: normal;
+}
+
+.card-mid-area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+	/* padding: 0.2rem .75rem; */
+}
+
+.card-mid-area * + *, .card-pickup, .driver-name, .ride-history-card .card-title  {
+	text-align: left;
+	font-weight: normal;
+	margin: 0;
+	font-size: 12px;
+}
+
+.ride-history-card .card-title {
+	font-size: unset;
+	font-weight: bold;
+}
+
+.card-pickup, .card-mid-top {
+	margin-bottom: .75rem;
+}
+
+.card-mid-btm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.location-icons {
+    margin-right: .5rem;
+}
+
+.location-a-b {
+    transform: scale(1.5) translateY(1.5px);
+}
+
+.card-end-area {
+    display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+    flex-direction: column;
+	width: 20%;
+	padding: .5rem;
+}
+
+.card-view-btn {
+	transform: rotate(180deg);
+	width: 1rem;
+}
+
+/* Ride Data Cards */
+
+.container.ride-data {
+	flex-direction: column;
+	margin: 2rem;
+}
+
+.ride-data-card {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    border-radius: .5rem;
+	padding: .33rem;
+	background: var(--forward-gradient);
+}
+
+.ride-data-card:nth-of-type(even) {
+	/* Selects every other card */
+	background: var(--backward-gradient);
+}
+
+.card-img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.card-icon {
+	width: 2rem;
+}
+
+.card-content-area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    border-radius: 0 .25rem .25rem 0;
+    background-color: white;
+	padding: 0.5rem .75rem;
+}
+
+.card-title {
+	text-align: left;
+	margin-bottom: .75rem;
+	font-weight: normal;
+}
+
+.card-data {
+	text-align: left;
+    font-size: 2rem;
+}
+
+/* Frequently Visited Locations Chart */
+
+.container.frequent-locations {
+    display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.frequent-locations-li {
+    display: flex;
+    flex-direction: row;
+	padding-bottom: 1rem;
+}
+
+.frequent-list-num-area {
+	width: 10%;
+	color: #276DF6;
+}
+
+.frequent-list-main-area {
+    border-bottom: #FF80DF 2px solid;
+    padding-bottom: 1rem;
+}
+
+.frequent-p {
+    font-weight: normal;
+}
+
+.dropdown-elements {
+	width: 200px;
+	border: 3px solid #C8CCF8;
+	background-color: white;
+	border-top: none;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	max-height: 200px;
+	min-height: 0px;
+	overflow: scroll;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	display: none;
+}
+
+.dropdown-elements button {
+	font-family: 'Cabin', sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	padding: .5rem 1rem;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+}

@@ -1,0 +1,172 @@
+.shadow {
+	box-shadow: 1px 10px 20px 7px rgba(0, 0, 0, 0.15);
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left: 0;
+    background-color: white;
+    transition: 0.5s;
+    padding: 60px 0;
+}
+
+
+.sidebar-btn {
+	margin: .5rem 0;
+	height: 40px;
+	box-sizing: border-box;
+	width: 150px;
+	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+	font-family: 'Cabin', sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sidebar-btn img {
+	padding: 1rem;
+	width: 20px;
+}
+
+.profile {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.profile-icon {
+	border-radius: 50%;
+}
+
+.sidenav a:hover {
+	color: #FF00BF;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.menu-btn {
+	width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+	position: fixed;
+	margin: 8px;
+}
+
+.menu-btn:hover {
+	cursor: pointer;
+	background-color: #FFE5FD;
+	transition: all .2s ease-in-out;
+}
+
+.landing-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.landing-footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40%;
+	border-radius: 10px 10px 0 0;
+	background-color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.5rem;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.help-btn {
+	position: fixed;
+	left: 0;
+	bottom: 40%;
+}
+
+.search {
+	height: 56px;
+	margin: 1rem 0;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+}
+
+.destination {
+	height: 56px;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	text-align: left;
+}
+
+.search img {
+	padding: 1rem;
+	width: 20px;
+}
+
+h1 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	margin: 0;
+}
+
+h2 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	margin: 0;
+}
+
+h3 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0;
+}
+
+p {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+#map {
+	height: 100%;
+}
